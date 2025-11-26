@@ -1,0 +1,25 @@
+{
+  "comments": {
+    "lineComment": "RYM CYM CYM"
+  },
+  "brackets": [
+    ["(", ")"],
+    ["[", "]"]
+  ],
+  "autoClosingPairs": [
+    ["(", ")"],
+    ["[", "]"],
+    ["\"", "\""]
+  ],
+  "surroundingPairs": [
+    ["(", ")"],
+    ["[", "]"],
+    ["\"", "\""]
+  ],
+  "folding": {
+    "markers": {
+      "start": "^\\s*(ALE WIE PAN|NO JAK NIE JAK TAK|CHLUŚNIEM)",
+      "end": "^\\s*(DO WIDZENIA PANU|DO CHAŁUPY ALE JUŻ|A ROBIĆ NI MA KOMU)"
+    }
+  }
+}

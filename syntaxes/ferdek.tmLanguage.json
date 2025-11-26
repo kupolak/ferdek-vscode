@@ -1,0 +1,170 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Ferdek",
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#strings" },
+    { "include": "#numbers" },
+    { "include": "#booleans" },
+    { "include": "#keywords" },
+    { "include": "#control-flow" },
+    { "include": "#declarations" },
+    { "include": "#operators" },
+    { "include": "#functions" },
+    { "include": "#variables" }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.ferdek",
+          "match": "RYM CYM CYM.*$"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.ferdek",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.ferdek",
+              "match": "\\\\."
+            }
+          ]
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.integer.ferdek",
+          "match": "\\b\\d+\\b"
+        },
+        {
+          "name": "constant.numeric.float.ferdek",
+          "match": "\\b\\d+\\.\\d+\\b"
+        }
+      ]
+    },
+    "booleans": {
+      "patterns": [
+        {
+          "name": "constant.language.boolean.ferdek",
+          "match": "\\b(A ŻEBYŚ PAN WIEDZIAŁ|GÓWNO PRAWDA|W TYM KRAJU NIE MA PRACY DLA LUDZI Z MOIM WYKSZTAŁCENIEM)\\b"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.other.ferdek",
+          "match": "\\b(CO JEST KURDE|O KURDE MAM POMYSŁA|A POCAŁUJCIE MNIE WSZYSCY W DUPĘ|W MORDĘ JEŻA|AKUKARACZA)\\b"
+        }
+      ]
+    },
+    "control-flow": {
+      "patterns": [
+        {
+          "name": "keyword.control.conditional.ferdek",
+          "match": "\\b(NO JAK NIE JAK TAK|A DUPA TAM|HELENA MUSZĘ CI COŚ POWIEDZIEĆ)\\b"
+        },
+        {
+          "name": "keyword.control.loop.ferdek",
+          "match": "\\b(CHLUŚNIEM BO UŚNIEM|MOJA NOGA JUŻ TUTAJ NIE POSTANIE)\\b"
+        },
+        {
+          "name": "keyword.control.flow.ferdek",
+          "match": "\\b(DO CHAŁUPY ALE JUŻ|A ROBIĆ NI MA KOMU)\\b"
+        }
+      ]
+    },
+    "declarations": {
+      "patterns": [
+        {
+          "name": "keyword.declaration.ferdek",
+          "match": "\\b(CYCU PRZYNIEŚ NO|ALE WIE PAN JA ZASADNICZO|DO WIDZENIA PANU|I JA INFORMUJĘ ŻE WYCHODZĘ)\\b"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.arithmetic.ferdek",
+          "match": "\\b(BABKA DAWAJ RENTĘ|PASZOŁ WON|ROZDUPCĘ BANK|MUSZĘ DO SRACZA|PROSZĘ MNIE NATYCHMIAST OPUŚCIĆ)\\b"
+        },
+        {
+          "name": "keyword.operator.comparison.ferdek",
+          "match": "\\b(TO PANU SIĘ CHCE WTEDY KIEDY MNIE|PAN TU NIE MIESZKASZ|GRUBA ŚWINIA|ŁYSA PAŁA)\\b"
+        },
+        {
+          "name": "keyword.operator.logical.ferdek",
+          "match": "\\b(PIWO I TELEWIZOR|ALBO JUTRO U ADWOKATA)\\b"
+        },
+        {
+          "name": "keyword.operator.assignment.ferdek",
+          "match": "\\b(AFERA JEST|TO NIE SĄ TANIE RZECZY)\\b"
+        }
+      ]
+    },
+    "functions": {
+      "patterns": [
+        {
+          "name": "support.function.builtin.ferdek",
+          "match": "\\b(A PROSZĘ BARDZO|NO I GITARA)\\b"
+        },
+        {
+          "name": "support.function.stdlib.kanapa.ferdek",
+          "match": "\\b(USIĄDŹ NA KANAPIE|ROZCIĄGNIJ KANAPĘ|POTNIJ KANAPĘ|PRZESUŃ NA KANAPIE|POSKŁADAJ KANAPĘ|WYTRZEP KANAPĘ|ZAMIEŃ NA KANAPIE|ILE MIEJSCA NA KANAPIE)\\b"
+        },
+        {
+          "name": "support.function.stdlib.kibel.ferdek",
+          "match": "\\b(OTWÓRZ KIBEL|ZAMKNIJ KIBEL|SPUŚĆ WODĘ|WYPOMPUJ|CZY KIBEL ZAJĘTY|OTWÓRZ KIBEL DO ZAPISU)\\b"
+        },
+        {
+          "name": "support.function.stdlib.skrzynka.ferdek",
+          "match": "\\b(ILE W SKRZYNCE|POLICZ SKRZYNKI|ZAOKRĄGLIJ DO SKRZYNKI|OTWÓRZ SKRZYNKĘ|PODZIEL SKRZYNKI|RESZTA ZE SKRZYNKI|LOSUJ ZE SKRZYNKI)\\b"
+        },
+        {
+          "name": "support.function.stdlib.klatka.ferdek",
+          "match": "\\b(WYJDŹ NA KLATKĘ|ZAPUKAJ DO SĄSIADA|KTO NA KLATCE|CZY SĄSIAD W DOMU)\\b"
+        },
+        {
+          "name": "support.function.stdlib.telewizor.ferdek",
+          "match": "\\b(WŁĄCZ TELEWIZOR|WYŁĄCZ TELEWIZOR|ZMIEŃ KANAŁ|NACIŚNIJ GUZIK|CO W TELEWIZORZE)\\b"
+        },
+        {
+          "name": "support.function.stdlib.wersalka.ferdek",
+          "match": "\\b(ROZKŁADAJ WERSALKĘ|ZŁOŻYĆ WERSALKĘ|CZY CZYSTA WERSALKA)\\b"
+        },
+        {
+          "name": "support.function.stdlib.szafka.ferdek",
+          "match": "\\b(OTWÓRZ SZAFKĘ|ZAMKNIJ SZAFKĘ|ILE W SZAFCE|WYRZUĆ ZE SZAFKI)\\b"
+        },
+        {
+          "name": "support.function.stdlib.lodówka.ferdek",
+          "match": "\\b(OTWÓRZ LODÓWKĘ|ZAMKNIJ LODÓWKĘ|ILE JE W LODÓWCE|WYRZUĆ Z LODÓWKI|NACZYŃ LODÓWKĘ)\\b"
+        },
+        {
+          "name": "support.function.stdlib.klatka.ferdek",
+          "match": "\\b(WYSYŁANIE|ODBIERANIE|HTTP GET|HTTP POST|HTTP PUT|HTTP DELETE)\\b"
+        }
+      ]
+    },
+    "variables": {
+      "patterns": [
+        {
+          "name": "variable.other.ferdek",
+          "match": "\\b[A-Z_][A-Z0-9_]*\\b"
+        },
+        {
+          "name": "variable.parameter.ferdek",
+          "match": "\\b[a-z_][a-z0-9_]*\\b"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.ferdek"
+}

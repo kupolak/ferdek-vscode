@@ -1,0 +1,11 @@
+.git
+.gitignore
+src
+.vscode-test/
+out/test/
+*.ts
+*.map
+.DS_Store
+npm-debug.log
+node_modules/
+out/test/

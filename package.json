@@ -1,0 +1,126 @@
+{
+  "name": "vscode-ferdek",
+  "displayName": "Ferdek Language Support",
+  "description": "Language support for Ferdek programming language - Polish meme language",
+  "version": "0.1.0",
+  "publisher": "kupolak",
+  "icon": "images/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kupolak/ferdek"
+  },
+  "engines": {
+    "vscode": "^1.84.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets"
+  ],
+  "keywords": [
+    "ferdek",
+    "polish",
+    "language",
+    "meme"
+  ],
+  "activationEvents": [
+    "onLanguage:ferdek"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "ferdek",
+        "aliases": [
+          "Ferdek",
+          "ferdek"
+        ],
+        "extensions": [
+          ".ferdek"
+        ],
+        "icon": {
+          "light": "images/icon.png",
+          "dark": "images/icon.png"
+        },
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "ferdek",
+        "scopeName": "source.ferdek",
+        "path": "./syntaxes/ferdek.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "ferdek",
+        "path": "./snippets/ferdek.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "ferdek.runFile",
+        "title": "Run Ferdek File",
+        "category": "Ferdek"
+      },
+      {
+        "command": "ferdek.compileFile",
+        "title": "Compile Ferdek to C",
+        "category": "Ferdek"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "ferdek.runFile",
+        "key": "ctrl+shift+f5",
+        "when": "editorLangId == ferdek"
+      },
+      {
+        "command": "ferdek.compileFile",
+        "key": "ctrl+shift+c",
+        "when": "editorLangId == ferdek"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Ferdek",
+      "properties": {
+        "ferdek.executable": {
+          "type": "string",
+          "default": "ferdek",
+          "description": "Path to the Ferdek interpreter executable"
+        },
+        "ferdek.compilerExecutable": {
+          "type": "string",
+          "default": "ferdecc",
+          "description": "Path to the Ferdek compiler executable"
+        },
+        "ferdek.showOutputChannel": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show output channel when running Ferdek programs"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run esbuild-base",
+    "esbuild-base": "esbuild ./src/extension.ts --bundle --outfile=out/extension.js --external:vscode --platform=node --target=node18 --minify",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js",
+    "esbuild": "npm run esbuild-base -- --sourcemap",
+    "esbuild-watch": "npm run esbuild-base -- --sourcemap --watch"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/vscode": "^1.84.0",
+    "@typescript-eslint/eslint-plugin": "^6.13.0",
+    "@typescript-eslint/parser": "^6.13.0",
+    "esbuild": "^0.19.10",
+    "eslint": "^8.54.0",
+    "typescript": "^5.3.2"
+  }
+}
