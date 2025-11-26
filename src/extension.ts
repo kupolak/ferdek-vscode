@@ -17,8 +17,14 @@ export function activate(context: vscode.ExtensionContext) {
         compileFerdekFile();
     });
 
+    // Register build and run command
+    let buildAndRunDisposable = vscode.commands.registerCommand('ferdek.buildAndRun', () => {
+        buildAndRunFerdekFile();
+    });
+
     context.subscriptions.push(runDisposable);
     context.subscriptions.push(compileDisposable);
+    context.subscriptions.push(buildAndRunDisposable);
     context.subscriptions.push(outputChannel);
 
     // Set up provider for hover information
@@ -135,6 +141,58 @@ function compileFerdekFile() {
     } catch (error: any) {
         outputChannel.appendLine(`✗ Error: ${error.message}`);
         vscode.window.showErrorMessage(`Failed to compile Ferdek: ${error.message}`);
+    }
+}
+
+function buildAndRunFerdekFile() {
+    const editor = vscode.window.activeTextEditor;
+    if (!editor || editor.document.languageId !== 'ferdek') {
+        vscode.window.showErrorMessage('Please open a Ferdek file (.ferdek)');
+        return;
+    }
+
+    const filePath = editor.document.fileName;
+    const config = vscode.workspace.getConfiguration('ferdek');
+    const executable = config.get<string>('executable', 'ferdek');
+    const showOutput = config.get<boolean>('showOutputChannel', true);
+
+    if (showOutput) {
+        outputChannel.show();
+    }
+
+    outputChannel.clear();
+    outputChannel.appendLine(`Running: ${executable} "${filePath}"\n`);
+
+    try {
+        const process = cp.spawn(executable, [filePath]);
+
+        let stdout = '';
+        let stderr = '';
+
+        process.stdout?.on('data', (data) => {
+            stdout += data.toString();
+            outputChannel.append(data.toString());
+        });
+
+        process.stderr?.on('data', (data) => {
+            stderr += data.toString();
+            outputChannel.append(data.toString());
+        });
+
+        process.on('close', (code) => {
+            outputChannel.appendLine(`\n✓ Program finished with code ${code}`);
+            if (code !== 0 && stderr) {
+                vscode.window.showErrorMessage(`Ferdek execution failed with code ${code}`);
+            }
+        });
+
+        process.on('error', (error) => {
+            outputChannel.appendLine(`✗ Error: ${error.message}`);
+            vscode.window.showErrorMessage(`Failed to run Ferdek: ${error.message}`);
+        });
+    } catch (error: any) {
+        outputChannel.appendLine(`✗ Error: ${error.message}`);
+        vscode.window.showErrorMessage(`Failed to run Ferdek: ${error.message}`);
     }
 }
 

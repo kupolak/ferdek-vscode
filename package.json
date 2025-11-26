@@ -67,6 +67,12 @@
         "command": "ferdek.compileFile",
         "title": "Compile Ferdek to C",
         "category": "Ferdek"
+      },
+      {
+        "command": "ferdek.buildAndRun",
+        "title": "Build and Run Ferdek File",
+        "category": "Ferdek",
+        "icon": "images/mocny-full.png"
       }
     ],
     "keybindings": [
@@ -79,8 +85,36 @@
         "command": "ferdek.compileFile",
         "key": "ctrl+shift+c",
         "when": "editorLangId == ferdek"
+      },
+      {
+        "command": "ferdek.buildAndRun",
+        "key": "ctrl+shift+f10",
+        "when": "editorLangId == ferdek"
       }
     ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "ferdek.buildAndRun",
+          "group": "navigation@1",
+          "when": "editorLangId == ferdek"
+        }
+      ],
+      "commandPalette": [
+        {
+          "command": "ferdek.runFile",
+          "when": "editorLangId == ferdek"
+        },
+        {
+          "command": "ferdek.compileFile",
+          "when": "editorLangId == ferdek"
+        },
+        {
+          "command": "ferdek.buildAndRun",
+          "when": "editorLangId == ferdek"
+        }
+      ]
+    },
     "configuration": {
       "type": "object",
       "title": "Ferdek",
