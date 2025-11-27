@@ -3,7 +3,7 @@
   "displayName": "Ferdek Language Support",
   "description": "Language support for Ferdek programming language - Polish meme language with HashMap, File ops & Lists",
   "version": "0.2.0",
-  "publisher": "kupolak",
+  "publisher": "JakubPolak",
   "icon": "images/icon.png",
   "repository": {
     "type": "git",
