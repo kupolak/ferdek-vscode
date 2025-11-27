@@ -150,5 +150,90 @@
     "prefix": "return",
     "body": "I JA INFORMUJĘ ŻE WYCHODZĘ ${1:wartość}",
     "description": "Return from function"
+  },
+  "HashMap Create": {
+    "prefix": "hashmap",
+    "body": "AFERA JEST ${1:mapa} W MORDE JEZA OTWÓRZ SZAFKĘ()",
+    "description": "Create empty hashmap using SZAFKA"
+  },
+  "HashMap Put": {
+    "prefix": "hmput",
+    "body": "W MORDE JEZA WŁÓŻ DO SZAFKI(${1:mapa}, ${2:\"klucz\"}, ${3:wartość})",
+    "description": "Put key-value into hashmap using SZAFKA"
+  },
+  "HashMap Get": {
+    "prefix": "hmget",
+    "body": "AFERA JEST ${1:wartość} W MORDE JEZA WYJMIJ Z SZAFKI(${2:mapa}, ${3:\"klucz\"})",
+    "description": "Get value from hashmap using SZAFKA"
+  },
+  "HashMap Has Key": {
+    "prefix": "hmhas",
+    "body": "AFERA JEST ${1:istnieje} W MORDE JEZA CZY W SZAFCE(${2:mapa}, ${3:\"klucz\"})",
+    "description": "Check if key exists in hashmap using SZAFKA"
+  },
+  "HashMap Keys": {
+    "prefix": "hmkeys",
+    "body": "AFERA JEST ${1:klucze} W MORDE JEZA WSZYSTKIE SZUFLADKI(${2:mapa})",
+    "description": "Get all keys from hashmap using SZAFKA"
+  },
+  "HashMap Size": {
+    "prefix": "hmsize",
+    "body": "AFERA JEST ${1:rozmiar} W MORDE JEZA ILE W SZAFCE(${2:mapa})",
+    "description": "Get hashmap size using SZAFKA"
+  },
+  "List Length": {
+    "prefix": "listlen",
+    "body": "AFERA JEST ${1:dlugosc} W MORDE JEZA ILE NA WERSALCE(${2:lista})",
+    "description": "Get list length using WERSALKA"
+  },
+  "List Append": {
+    "prefix": "listadd",
+    "body": "AFERA JEST ${1:nowa_lista} W MORDE JEZA POŁÓŻ NA WERSALCE(${2:lista}, ${3:element})",
+    "description": "Append element to list using WERSALKA"
+  },
+  "List Contains": {
+    "prefix": "listhas",
+    "body": "AFERA JEST ${1:zawiera} W MORDE JEZA CZY LEŻY NA WERSALCE(${2:lista}, ${3:element})",
+    "description": "Check if list contains element using WERSALKA"
+  },
+  "List Pop": {
+    "prefix": "listpop",
+    "body": "AFERA JEST ${1:element} W MORDE JEZA ZDEJMIJ Z WERSALKI(${2:lista})",
+    "description": "Pop last element from list using WERSALKA"
+  },
+  "Directory Create": {
+    "prefix": "mkdir",
+    "body": "AFERA JEST ${1:sukces} W MORDE JEZA ZRÓB KIBEL(${2:\"/path/to/dir\"})",
+    "description": "Create directory using KIBEL"
+  },
+  "Directory List": {
+    "prefix": "ls",
+    "body": "AFERA JEST ${1:pliki} W MORDE JEZA CO W KIBLU(${2:\"/path/to/dir\"})",
+    "description": "List directory contents using KIBEL"
+  },
+  "Directory Remove": {
+    "prefix": "rmdir",
+    "body": "W MORDE JEZA WYWAL KIBEL(${1:\"/path/to/dir\"})",
+    "description": "Remove empty directory using KIBEL"
+  },
+  "Directory Remove Recursive": {
+    "prefix": "rmrf",
+    "body": "W MORDE JEZA WYKOP WSZYSTKIE KIBLE(${1:\"/path/to/dir\"})",
+    "description": "Recursively remove directory using KIBEL"
+  },
+  "File Copy": {
+    "prefix": "cp",
+    "body": "AFERA JEST ${1:sukces} W MORDE JEZA PRZEKOPIUJ KIBEL(${2:\"/src\"}, ${3:\"/dest\"})",
+    "description": "Copy file using KIBEL"
+  },
+  "File Move": {
+    "prefix": "mv",
+    "body": "AFERA JEST ${1:sukces} W MORDE JEZA PRZENIEŚ KIBEL(${2:\"/src\"}, ${3:\"/dest\"})",
+    "description": "Move/rename file using KIBEL"
+  },
+  "Is Directory": {
+    "prefix": "isdir",
+    "body": "AFERA JEST ${1:jest_katalog} W MORDE JEZA CZY TO KIBEL(${2:\"/path\"})",
+    "description": "Check if path is directory using KIBEL"
   }
 }

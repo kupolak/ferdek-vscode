@@ -1,8 +1,8 @@
 {
   "name": "vscode-ferdek",
   "displayName": "Ferdek Language Support",
-  "description": "Language support for Ferdek programming language - Polish meme language",
-  "version": "0.1.0",
+  "description": "Language support for Ferdek programming language - Polish meme language with HashMap, File ops & Lists",
+  "version": "0.2.0",
   "publisher": "kupolak",
   "icon": "images/icon.png",
   "repository": {

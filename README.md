@@ -60,6 +60,15 @@ MOJA NOGA JUŻ TUTAJ NIE POSTANIE
 | `fopen` | Open file for reading (KIBEL) |
 | `fwrite` | Write to file (KIBEL) |
 | `fread` | Read from file (KIBEL) |
+| `mkdir` | Create directory (KIBEL) |
+| `ls` | List directory (KIBEL) |
+| `cp` | Copy file (KIBEL) |
+| `mv` | Move/rename file (KIBEL) |
+| `hashmap` | Create HashMap (SZAFKA) |
+| `hmput` | Put into HashMap (SZAFKA) |
+| `hmget` | Get from HashMap (SZAFKA) |
+| `listlen` | Get list length (WERSALKA) |
+| `listadd` | Append to list (WERSALKA) |
 | `try` | Try-catch block |
 
 ## Language Overview
@@ -100,13 +109,20 @@ MOJA NOGA JUŻ TUTAJ NIE POSTANIE
 - `ZAMIEŃ NA KANAPIE` - Replace substring
 - `PRZESUŃ NA KANAPIE` - Split string
 
-**KIBEL** - File I/O:
+**KIBEL** - File & Directory I/O:
 - `OTWÓRZ KIBEL` - Open file for reading
 - `OTWÓRZ KIBEL DO ZAPISU` - Open file for writing
 - `ZAMKNIJ KIBEL` - Close file
 - `SPUŚĆ WODĘ` - Write to file
 - `WYPOMPUJ` - Read from file
 - `CZY KIBEL ZAJĘTY` - Check if file exists
+- `ZRÓB KIBEL` - Create directory (mkdir)
+- `WYWAL KIBEL` - Remove directory (rmdir)
+- `CO W KIBLU` - List directory contents (ls)
+- `CZY TO KIBEL` - Check if path is directory
+- `PRZEKOPIUJ KIBEL` - Copy file (cp)
+- `PRZENIEŚ KIBEL` - Move/rename file (mv)
+- `WYKOP WSZYSTKIE KIBLE` - Recursive delete (rm -rf)
 
 **SKRZYNKA** - Math functions:
 - `ILE W SKRZYNCE` - Absolute value
@@ -117,9 +133,25 @@ MOJA NOGA JUŻ TUTAJ NIE POSTANIE
 - `LOSUJ ZE SKRZYNKI` - Random number
 
 **KLATKA** - Networking:
-- `WYJDŹ NA KLATKĘ` - Connect to network
-- `ZAPUKAJ DO SĄSIADA` - Send message
-- `CZY SĄSIAD W DOMU` - Check connection status
+- `WYJDŹ NA KLATKĘ` - HTTP GET
+- `ZAPUKAJ DO SĄSIADA` - HTTP POST
+- `KTO NA KLATCE` - Get public IP
+- `CZY SĄSIAD W DOMU` - Ping/check host
+
+**SZAFKA** - HashMap/Dictionary:
+- `OTWÓRZ SZAFKĘ` - Create empty HashMap
+- `WŁÓŻ DO SZAFKI` - Put key-value pair
+- `WYJMIJ Z SZAFKI` - Get value by key
+- `WYRZUĆ ZE SZAFKI` - Remove key-value pair
+- `CZY W SZAFCE` - Check if key exists
+- `WSZYSTKIE SZUFLADKI` - Get all keys
+- `ILE W SZAFCE` - Get HashMap size
+
+**WERSALKA** - List/Array operations:
+- `ILE NA WERSALCE` - Get list length
+- `POŁÓŻ NA WERSALCE` - Append element to list
+- `ZDEJMIJ Z WERSALKI` - Pop last element from list
+- `CZY LEŻY NA WERSALCE` - Check if element in list
 
 ## Settings
 

@@ -1,43 +1,38 @@
-# Change Log
+# Changelog
 
-All notable changes to the "vscode-ferdek" extension will be documented in this file.
+All notable changes to the Ferdek VSCode extension will be documented in this file.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+## [0.2.0] - 2025-11-27
+
+### Added
+- **SZAFKA (HashMap/Dictionary) support**
+  - Syntax highlighting for 7 new HashMap functions
+  - Snippets: `hashmap`, `hmput`, `hmget`, `hmhas`, `hmkeys`, `hmsize`
+  - Functions: OTWÓRZ SZAFKĘ, WŁÓŻ DO SZAFKI, WYJMIJ Z SZAFKI, WYRZUĆ ZE SZAFKI, CZY W SZAFCE, WSZYSTKIE SZUFLADKI, ILE W SZAFCE
+
+- **WERSALKA (List/Array operations) support**
+  - Syntax highlighting for 4 list operation functions
+  - Snippets: `listlen`, `listadd`, `listhas`, `listpop`
+  - Functions: ILE NA WERSALCE, POŁÓŻ NA WERSALCE, ZDEJMIJ Z WERSALKI, CZY LEŻY NA WERSALCE
+
+- **KIBEL (Extended File operations) support**
+  - Syntax highlighting for 7 new file/directory functions
+  - Snippets: `mkdir`, `ls`, `rmdir`, `rmrf`, `cp`, `mv`, `isdir`
+  - Functions: ZRÓB KIBEL, CO W KIBLU, WYWAL KIBEL, CZY TO KIBEL, PRZEKOPIUJ KIBEL, PRZENIEŚ KIBEL, WYKOP WSZYSTKIE KIBLE
+
+### Changed
+- Updated README with comprehensive documentation for new features
+- Enhanced code snippets with practical examples for package manager development
 
 ## [0.1.0] - 2025-11-26
 
 ### Added
-- Initial release of Ferdek Language Support for VS Code
+- Initial release
 - Syntax highlighting for Ferdek language
-- Code snippets for common patterns
-  - Program structure
-  - Variable and array declarations
-  - Control flow (if/else, while loops)
-  - Function definitions and calls
-  - String operations (KANAPA module)
-  - File I/O operations (KIBEL module)
-  - Error handling (try/catch)
-  - Module imports
-- Language configuration
-  - Comment recognition
-  - Bracket pair matching
-  - Code folding regions
-- Commands
-  - `ferdek.runFile` - Run Ferdek program (Ctrl+Shift+F5)
-  - `ferdek.compileFile` - Compile to C (Ctrl+Shift+C)
-- Features
-  - Hover information for keywords
-  - Intelligent code completion
-  - IntelliSense support
-- Settings
-  - Path to Ferdek interpreter
-  - Path to Ferdek compiler
-  - Output channel visibility
-
-### Features Planned
-- [ ] Language Server Protocol (LSP) support
-- [ ] Debugging support
-- [ ] Integrated REPL
-- [ ] Better error reporting
-- [ ] Project templates
-- [ ] Online documentation links
+- Basic code snippets (variables, functions, loops)
+- KANAPA (String operations) support
+- KIBEL (Basic file I/O) support
+- SKRZYNKA (Math operations) support
+- KLATKA (Networking) support
+- Run and compile commands
+- Language configuration (comments, brackets)

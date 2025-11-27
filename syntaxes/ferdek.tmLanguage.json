@@ -121,7 +121,7 @@
         },
         {
           "name": "support.function.stdlib.kibel.ferdek",
-          "match": "\\b(OTWÓRZ KIBEL|ZAMKNIJ KIBEL|SPUŚĆ WODĘ|WYPOMPUJ|CZY KIBEL ZAJĘTY|OTWÓRZ KIBEL DO ZAPISU)\\b"
+          "match": "\\b(OTWÓRZ KIBEL|ZAMKNIJ KIBEL|SPUŚĆ WODĘ|WYPOMPUJ|CZY KIBEL ZAJĘTY|OTWÓRZ KIBEL DO ZAPISU|ZRÓB KIBEL|WYWAL KIBEL|CO W KIBLU|CZY TO KIBEL|PRZEKOPIUJ KIBEL|PRZENIEŚ KIBEL|WYKOP WSZYSTKIE KIBLE)\\b"
         },
         {
           "name": "support.function.stdlib.skrzynka.ferdek",
@@ -137,11 +137,11 @@
         },
         {
           "name": "support.function.stdlib.wersalka.ferdek",
-          "match": "\\b(ROZKŁADAJ WERSALKĘ|ZŁOŻYĆ WERSALKĘ|CZY CZYSTA WERSALKA)\\b"
+          "match": "\\b(ILE NA WERSALCE|POŁÓŻ NA WERSALCE|ZDEJMIJ Z WERSALKI|CZY LEŻY NA WERSALCE|ROZŁÓŻ WERSALKĘ|POSKŁADAJ WERSALKĘ)\\b"
         },
         {
           "name": "support.function.stdlib.szafka.ferdek",
-          "match": "\\b(OTWÓRZ SZAFKĘ|ZAMKNIJ SZAFKĘ|ILE W SZAFCE|WYRZUĆ ZE SZAFKI)\\b"
+          "match": "\\b(OTWÓRZ SZAFKĘ|WŁÓŻ DO SZAFKI|WYJMIJ Z SZAFKI|WYRZUĆ ZE SZAFKI|CZY W SZAFCE|WSZYSTKIE SZUFLADKI|ILE W SZAFCE)\\b"
         },
         {
           "name": "support.function.stdlib.lodówka.ferdek",
