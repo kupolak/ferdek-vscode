@@ -235,5 +235,215 @@
     "prefix": "isdir",
     "body": "AFERA JEST ${1:jest_katalog} W MORDE JEZA CZY TO KIBEL(${2:\"/path\"})",
     "description": "Check if path is directory using KIBEL"
+  },
+  "Struct Definition": {
+    "prefix": "struct",
+    "body": [
+      "MEBEL ${1:NazwaStruktury}",
+      "\tCYCU PRZYNIEŚ NO ${2:pole1}",
+      "\tTO NIE SĄ TANIE RZECZY ${3:wartość1}",
+      "\tCYCU PRZYNIEŚ NO ${4:pole2}",
+      "\tTO NIE SĄ TANIE RZECZY ${5:wartość2}",
+      "KONIEC MEBLA"
+    ],
+    "description": "Define a struct (MEBEL)"
+  },
+  "Create Struct Instance": {
+    "prefix": "newstruct",
+    "body": "AFERA JEST ${1:instancja} W MORDE JEZA ZMONTUJ MEBEL ${2:NazwaStruktury}",
+    "description": "Create new struct instance"
+  },
+  "Class Definition": {
+    "prefix": "class",
+    "body": [
+      "ALE JAJA ${1:NazwaKlasy}",
+      "",
+      "\tCYCU PRZYNIEŚ NO ${2:pole}",
+      "\tTO NIE SĄ TANIE RZECZY ${3:wartość}",
+      "",
+      "\tALE WIE PAN JA ZASADNICZO ${4:metoda}",
+      "\t\t${5:RYM CYM CYM kod metody}",
+      "\t\tI JA INFORMUJĘ ŻE WYCHODZĘ ${6:rezultat}",
+      "\tDO WIDZENIA PANU",
+      "",
+      "DO WIDZENIA PANU"
+    ],
+    "description": "Define a class (ALE JAJA)"
+  },
+  "Create Object": {
+    "prefix": "newobj",
+    "body": "AFERA JEST ${1:obiekt} W MORDE JEZA DZIAD ZDZIADZIAŁY JEDEN ${2:NazwaKlasy}",
+    "description": "Create new object instance"
+  },
+  "Array Access": {
+    "prefix": "arraccess",
+    "body": "AFERA JEST ${1:element} W MORDE JEZA WYPIERDZIELAJ PAN NA POZYCJĘ ${2:tablica}[${3:index}]",
+    "description": "Access array element"
+  },
+  "Object Field Access": {
+    "prefix": "objaccess",
+    "body": "AFERA JEST ${1:wartość} W MORDE JEZA WYPIERDZIELAJ PAN NA POZYCJĘ ${2:obiekt}[\"${3:pole}\"]",
+    "description": "Access object field"
+  },
+  "Assignment Block": {
+    "prefix": "assign",
+    "body": [
+      "O KURDE MAM POMYSŁA ${1:zmienna}",
+      "A PROSZĘ BARDZO ${2:wartość}",
+      "NO I GITARA"
+    ],
+    "description": "Assignment block"
+  },
+  "Try-Catch": {
+    "prefix": "trycatch",
+    "body": [
+      "HELENA MUSZĘ CI COŚ POWIEDZIEĆ",
+      "\t${1:RYM CYM CYM try block}",
+      "HELENA MAM ZAWAŁ ${2:error}",
+      "\t${3:RYM CYM CYM catch block}"
+    ],
+    "description": "Try-catch exception handling"
+  },
+  "Null Value": {
+    "prefix": "null",
+    "body": "W TYM KRAJU NIE MA PRACY DLA LUDZI Z MOIM WYKSZTAŁCENIEM",
+    "description": "Null value"
+  },
+  "Enum Definition": {
+    "prefix": "enum",
+    "body": [
+      "PANIE LISTA ${1:NazwaEnum}",
+      "\t${2:WARTOŚĆ1}",
+      "\t${3:WARTOŚĆ2} TO NIE SĄ TANIE RZECZY ${4:5}",
+      "\t${5:WARTOŚĆ3}",
+      "KONIEC LISTY"
+    ],
+    "description": "Define an enum (PANIE LISTA)"
+  },
+  "Union Definition": {
+    "prefix": "union",
+    "body": [
+      "WCHODZIMY DO UNII ${1:NazwaUnion}",
+      "\tCYCU PRZYNIEŚ NO ${2:pole1}",
+      "\tTO NIE SĄ TANIE RZECZY ${3:wartość1}",
+      "\tCYCU PRZYNIEŚ NO ${4:pole2}",
+      "\tTO NIE SĄ TANIE RZECZY ${5:wartość2}",
+      "KONIEC UNII EUROPEJSKIEJ"
+    ],
+    "description": "Define a union (WCHODZIMY DO UNII)"
+  },
+  "Create Union Instance": {
+    "prefix": "newunion",
+    "body": "AFERA JEST ${1:unia} W MORDE JEZA WEJDŹ DO UNII ${2:NazwaUnion}",
+    "description": "Create new union instance"
+  },
+  "Pointer Declaration": {
+    "prefix": "pointer",
+    "body": "AFERA JEST ${1:wskaznik} W MORDE JEZA PALCEM POKAZUJĘ ${2:zmienna}",
+    "description": "Create pointer to variable"
+  },
+  "Dereference Pointer": {
+    "prefix": "deref",
+    "body": "AFERA JEST ${1:wartość} W MORDE JEZA CO TAM JEST ${2:wskaznik}",
+    "description": "Dereference pointer"
+  },
+  "Address Of": {
+    "prefix": "address",
+    "body": "AFERA JEST ${1:adres} W MORDE JEZA GDZIE STOI ${2:zmienna}",
+    "description": "Get address of variable"
+  },
+  "Function With Return": {
+    "prefix": "funcreturn",
+    "body": [
+      "ALE WIE PAN JA ZASADNICZO ${1:nazwa}",
+      "NO DOBRZE ALE CO JA Z TEGO BĘDĘ MIAŁ",
+      "NA TAKIE TEMATY NIE ROZMAWIAM NA SUCHO ${2:param}",
+      "\t${3:RYM CYM CYM kod funkcji}",
+      "\tI JA INFORMUJĘ ŻE WYCHODZĘ ${4:rezultat}",
+      "DO WIDZENIA PANU"
+    ],
+    "description": "Function with return type"
+  },
+  "Type Cast": {
+    "prefix": "cast",
+    "body": "AFERA JEST ${1:rzutowana} W MORDE JEZA ${2:ZRÓB BAJCIK|ZRÓB KRÓTKI|ZRÓB DŁUGI}(${3:zmienna})",
+    "description": "Type casting"
+  },
+  "Get Type": {
+    "prefix": "typeof",
+    "body": "AFERA JEST ${1:typ} W MORDE JEZA CO TO ZA TYP(${2:zmienna})",
+    "description": "Get variable type"
+  },
+  "Memory Allocation": {
+    "prefix": "malloc",
+    "body": "AFERA JEST ${1:blok} W MORDE JEZA DAJ MI HAJS(${2:rozmiar}, ${3:tag})",
+    "description": "Allocate memory block"
+  },
+  "Memory Write": {
+    "prefix": "memwrite",
+    "body": "W MORDE JEZA ZAPISZ DO BLOKU(${1:blok}, ${2:offset}, ${3:wartość})",
+    "description": "Write to memory block"
+  },
+  "Memory Read": {
+    "prefix": "memread",
+    "body": "AFERA JEST ${1:wartość} W MORDE JEZA CZYTAJ Z BLOKU(${2:blok}, ${3:offset})",
+    "description": "Read from memory block"
+  },
+  "Variadic Function": {
+    "prefix": "varfunc",
+    "body": [
+      "ALE WIE PAN JA ZASADNICZO ${1:nazwa}",
+      "NA TAKIE TEMATY NIE ROZMAWIAM NA SUCHO ${2:pierwszy}, I CAŁE TOWARZYSTWO",
+      "\tRYM CYM CYM DOSTAŁEM_RESZTĘ zawiera pozostałe argumenty",
+      "\t${3:RYM CYM CYM kod funkcji}",
+      "\tI JA INFORMUJĘ ŻE WYCHODZĘ ${4:rezultat}",
+      "DO WIDZENIA PANU"
+    ],
+    "description": "Variadic function definition"
+  },
+  "2D Array Creation": {
+    "prefix": "array2d",
+    "body": "AFERA JEST ${1:tablica} W MORDE JEZA TABLICA 2D(${2:wysokość}, ${3:szerokość})",
+    "description": "Create 2D array"
+  },
+  "Bitwise Operations": {
+    "prefix": "bitwise",
+    "body": "AFERA JEST ${1:wynik} W MORDE JEZA ${2:a} ${3:WSZYSTKO MUSI BYĆ|COKOLWIEK MOŻE BYĆ|TYLKO JEDNO Z TEGO|RUSZ SIĘ W LEWO|RUSZ SIĘ W PRAWO} ${4:b}",
+    "description": "Bitwise operations"
+  },
+  "Create Framebuffer": {
+    "prefix": "framebuffer",
+    "body": "AFERA JEST ${1:ekran} W MORDE JEZA WŁĄCZ TELEWIZOR(${2:szerokość}, ${3:wysokość})",
+    "description": "Create framebuffer"
+  },
+  "Set Pixel": {
+    "prefix": "setpixel",
+    "body": "W MORDE JEZA ZMIEŃ KANAŁ(${1:ekran}, ${2:x}, ${3:y}, ${4:kolor})",
+    "description": "Set pixel in framebuffer"
+  },
+  "Get Pixel": {
+    "prefix": "getpixel",
+    "body": "AFERA JEST ${1:kolor} W MORDE JEZA CO LECI W TELEWIZORZE(${2:ekran}, ${3:x}, ${4:y})",
+    "description": "Get pixel from framebuffer"
+  },
+  "Create Lookup Table": {
+    "prefix": "lookup",
+    "body": "AFERA JEST ${1:tabela} W MORDE JEZA STWÓRZ TABELĘ(${2:rozmiar})",
+    "description": "Create lookup table"
+  },
+  "Set Table Entry": {
+    "prefix": "setentry",
+    "body": "W MORDE JEZA WPISZ DO TABELI(${1:tabela}, ${2:index}, ${3:wartość})",
+    "description": "Set table entry"
+  },
+  "File Write": {
+    "prefix": "fwrite",
+    "body": "W MORDE JEZA PISZ(${1:uchwyt}, ${2:dane})",
+    "description": "Write to file"
+  },
+  "File Close": {
+    "prefix": "fclose",
+    "body": "W MORDE JEZA ZAMKNIJ(${1:uchwyt})",
+    "description": "Close file"
   }
 }

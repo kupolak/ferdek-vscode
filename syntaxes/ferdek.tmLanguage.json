@@ -61,7 +61,7 @@
       "patterns": [
         {
           "name": "keyword.other.ferdek",
-          "match": "\\b(CO JEST KURDE|O KURDE MAM POMYSŁA|A POCAŁUJCIE MNIE WSZYSCY W DUPĘ|W MORDĘ JEŻA|AKUKARACZA)\\b"
+          "match": "\\b(CO JEST KURDE|O KURDE MAM POMYSŁA|A POCAŁUJCIE MNIE WSZYSCY W DUPĘ|W MORDĘ JEŻA|AKUKARACZA|O KOGO MOJE PIĘKNE OCZY WIDZĄ|A PROSZĘ BARDZO|NO I GITARA|PANIE LISTA|KONIEC LISTY|WCHODZIMY DO UNII|KONIEC UNII EUROPEJSKIEJ|WEJDŹ DO UNII|PALCEM POKAZUJĘ|CO TAM JEST|GDZIE STOI|NO DOBRZE ALE CO JA Z TEGO BĘDĘ MIAŁ|I CAŁE TOWARZYSTWO|DOSTAŁEM_RESZTĘ)\\b"
         }
       ]
     },
@@ -69,7 +69,7 @@
       "patterns": [
         {
           "name": "keyword.control.conditional.ferdek",
-          "match": "\\b(NO JAK NIE JAK TAK|A DUPA TAM|HELENA MUSZĘ CI COŚ POWIEDZIEĆ)\\b"
+          "match": "\\b(NO JAK NIE JAK TAK|A DUPA TAM|HELENA MUSZĘ CI COŚ POWIEDZIEĆ|HELENA MAM ZAWAŁ)\\b"
         },
         {
           "name": "keyword.control.loop.ferdek",
@@ -85,7 +85,7 @@
       "patterns": [
         {
           "name": "keyword.declaration.ferdek",
-          "match": "\\b(CYCU PRZYNIEŚ NO|ALE WIE PAN JA ZASADNICZO|DO WIDZENIA PANU|I JA INFORMUJĘ ŻE WYCHODZĘ)\\b"
+          "match": "\\b(CYCU PRZYNIEŚ NO|ALE WIE PAN JA ZASADNICZO|DO WIDZENIA PANU|I JA INFORMUJĘ ŻE WYCHODZĘ|PANIE TO JEST PRYWATNA PUBLICZNA TABLICA|ALE JAJA|MEBEL|KONIEC MEBLA|ZMONTUJ MEBEL|DZIAD ZDZIADZIAŁY JEDEN)\\b"
         }
       ]
     },
@@ -93,11 +93,11 @@
       "patterns": [
         {
           "name": "keyword.operator.arithmetic.ferdek",
-          "match": "\\b(BABKA DAWAJ RENTĘ|PASZOŁ WON|ROZDUPCĘ BANK|MUSZĘ DO SRACZA|PROSZĘ MNIE NATYCHMIAST OPUŚCIĆ)\\b"
+          "match": "\\b(BABKA DAWAJ RENTĘ|PASZOŁ WON|ROZDUPCĘ BANK|MUSZĘ DO SRACZA|PROSZĘ MNIE NATYCHMIAST OPUŚCIĆ|ZRÓB DŁUGI|ZRÓB BAJCIK|ZRÓB KRÓTKI)\\b"
         },
         {
           "name": "keyword.operator.comparison.ferdek",
-          "match": "\\b(TO PANU SIĘ CHCE WTEDY KIEDY MNIE|PAN TU NIE MIESZKASZ|GRUBA ŚWINIA|ŁYSA PAŁA)\\b"
+          "match": "\\b(TO PANU SIĘ CHCE WTEDY KIEDY MNIE|PAN TU NIE MIESZKASZ|GRUBA ŚWINIA|ŁYSA PAŁA|ŚWINIA|WSZYSTKO MUSI BYĆ|COKOLWIEK MOŻE BYĆ|TYLKO JEDNO Z TEGO|RUSZ SIĘ W LEWO|RUSZ SIĘ W PRAWO)\\b"
         },
         {
           "name": "keyword.operator.logical.ferdek",
@@ -105,7 +105,7 @@
         },
         {
           "name": "keyword.operator.assignment.ferdek",
-          "match": "\\b(AFERA JEST|TO NIE SĄ TANIE RZECZY)\\b"
+          "match": "\\b(AFERA JEST|TO NIE SĄ TANIE RZECZY|WYPIERDZIELAJ PAN NA POZYCJĘ|TABLICA 2D)\\b"
         }
       ]
     },
@@ -137,7 +137,7 @@
         },
         {
           "name": "support.function.stdlib.wersalka.ferdek",
-          "match": "\\b(ILE NA WERSALCE|POŁÓŻ NA WERSALCE|ZDEJMIJ Z WERSALKI|CZY LEŻY NA WERSALCE|ROZŁÓŻ WERSALKĘ|POSKŁADAJ WERSALKĘ)\\b"
+          "match": "\\b(ILE NA WERSALCE|POŁÓŻ NA WERSALCE|ZDEJMIJ Z WERSALKI|CZY LEŻY NA WERSALCE|POSKŁADAJ WERSALKĘ|ODWRÓĆ WERSALKĘ|PRZERABIAJ WERSALKĘ|PRZEFILTRUJ WERSALKĘ|PRZERABIAJ WERSALKĘ|ODWRÓĆ WERSALKĘ|PRZERABIAJ WERSALKĘ|PRZEFILTRUJ WERSALKĘ|ROZŁÓŻ WERSALKĘ)\\b"
         },
         {
           "name": "support.function.stdlib.szafka.ferdek",
@@ -148,8 +148,20 @@
           "match": "\\b(OTWÓRZ LODÓWKĘ|ZAMKNIJ LODÓWKĘ|ILE JE W LODÓWCE|WYRZUĆ Z LODÓWKI|NACZYŃ LODÓWKĘ)\\b"
         },
         {
-          "name": "support.function.stdlib.klatka.ferdek",
-          "match": "\\b(WYSYŁANIE|ODBIERANIE|HTTP GET|HTTP POST|HTTP PUT|HTTP DELETE)\\b"
+          "name": "support.function.stdlib.memory.ferdek",
+          "match": "\\b(DAJ MI HAJS|ROZMIAR BLOKU|ZAPISZ DO BLOKU|CZYTAJ Z BLOKU)\\b"
+        },
+        {
+          "name": "support.function.stdlib.types.ferdek",
+          "match": "\\b(CO TO ZA TYP)\\b"
+        },
+        {
+          "name": "support.function.stdlib.framebuffer.ferdek",
+          "match": "\\b(WŁĄCZ TELEWIZOR|ZMIEŃ KANAŁ|CO LECI W TELEWIZORZE|STWÓRZ TABELĘ|WPISZ DO TABELI)\\b"
+        },
+        {
+          "name": "support.function.stdlib.io.ferdek",
+          "match": "\\b(PISZ|ZAMKNIJ)\\b"
         }
       ]
     },
